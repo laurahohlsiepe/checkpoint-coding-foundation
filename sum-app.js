@@ -8,10 +8,18 @@ class SumApp {
   }
 
   getSum() {
-    this.numbers.reduce();
+    let sum = 0;
+
+    for (let i = 0; i < this.numbers.length; i++) {
+      sum += this.numbers[i];
+    }
+
+    return sum;
   }
 
-  reset() {}
+  reset() {
+    this.numbers = [];
+  }
 }
 
 const sumApp = new SumApp();
